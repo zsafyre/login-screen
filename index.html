@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+    />
+    <title>Zsafyre | Login screen</title>
+  </head>
+  <body>
+    <div class="box">
+      <div class="container">
+        <div class="header">
+          <span>Já tem uma conta?</span>
+          <header>Faça o login</header>
+        </div>
+        <div class="inputf">
+          <input type="text" class="input" placeholder="Usuário" id="" />
+          <i class="bx bx-user"></i>
+        </div>
+        <div class="inputf" >
+          <div class="box2">
+            <input type="password" class="input" placeholder="Senha" id="password" />
+            <img src="./imgs/closed-eye.png" id="eyeicon">
+          </div>
+          <i class="bx bx-lock-alt"></i>
+        </div>
+        <div class="inputf">
+          <input type="submit" class="login" value="Login" id="" />
+        </div>
+        <div class="chbx">
+          <div class="pss1">
+             <input type="checkbox" name="" id="check">
+             <label for="check"> Lembrar-me</label>
+          </div>
+          <div class="pss2">
+            <label><a href="#">Esqueceu a senha?</a></label>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <script>
+
+    let eyeicon = document.getElementById("eyeicon");
+    let password = document.getElementById("password");
+
+    eyeicon.onclick = function(){
+      if(password.type == "password"){
+        password.type = "text";
+        eyeicon.src = "./imgs/open-eye.png"
+      }else{
+        password.type = "password";
+        eyeicon.src = "./imgs/closed-eye.png"
+      }
+    }
+
+  </script>
+
+</html>
